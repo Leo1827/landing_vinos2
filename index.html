@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vin Rouge Hero</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente elegante Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+  <!-- Agregar la fuente a Tailwind -->
+  <style>
+    @layer utilities {
+      .font-cinzel {
+        font-family: 'Cinzel', serif;
+      }
+      @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+      .animate-fade-in-up {
+        animation: fade-in-up 1.2s ease-out forwards;
+      }
+    }
+  </style>
+</head>
+
+<body id="pageBody" class="bg-black text-white transition-colors duration-300 font-cinzel">
+
+  <!-- Hero Section con fondo de video -->
+  <section class="relative min-h-screen flex items-center py-16 px-6 md:px-16 overflow-hidden">
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+      <source src="https://videos.pexels.com/video-files/7686970/7686970-hd_1920_1080_24fps.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+
+    <!-- Capa oscura opcional para mejor legibilidad del texto -->
+    <div class="absolute top-0 left-0 w-full h-full bg-black/80 sm:bg-black/40 z-0"></div>
+
+    <!-- Contenido -->
+    <div class="z-10 max-w-4xl animate-fade-in-up text-white text-center md:text-right mx-auto md:ml-auto md:mr-0">
+      <h4 class="text-sm uppercase tracking-widest text-[#f6d8d8] font-semibold mb-6">
+        Winemaking Tradition
+      </h4>
+      <h1 class="text-1xl sm:text-5xl md:text-3xl leading-tight mb-6">
+        Black wine é um evento exclusivo<br />
+        da Black Friday dedicado aos<br />
+        verdadeiros apreciadores <br />
+        e investidores em vinhos finos.
+      </h1>
+      <div>
+        <button id="openModalBtn" 
+          class="border border-t-[#7B1E3A] border-l-[#000] border-r-[#000] border-b-[#7B1E3A] text-white px-16 py-2 uppercase tracking-wider hover:bg-[#7B1E3A] hover:text-white transition">
+          Inscreva-se no evento
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Sección de Tarjetas con Imagen y Efecto de Click -->
+  <section class="w-full min-h-[90vh] grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Card 1 -->
+    <div class="group relative h-[45vh] cursor-pointer overflow-hidden">
+      <img
+        src="https://images.pexels.com/photos/87224/pexels-photo-87224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Rótulos Raros"
+        class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
+        <h3 class="text-3xl font-bold font-cinzel mb-2">Rótulos Raros</h3>
+        <p class="text-lg">Garrafas únicas com alto potencial de valorização ao longo do tempo.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group relative h-[45vh] cursor-pointer overflow-hidden">
+      <img
+        src="https://images.pexels.com/photos/4515526/pexels-photo-4515526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Descontos Exclusivos"
+        class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
+        <h3 class="text-3xl font-bold font-cinzel mb-2">Descontos Exclusivos</h3>
+        <p class="text-lg">Até 30% de desconto em seleções com curadoria especializada.</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group relative h-[45vh] cursor-pointer overflow-hidden">
+      <img
+        src="https://images.pexels.com/photos/9364762/pexels-photo-9364762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Condições Únicas"
+        class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
+        <h3 class="text-3xl font-bold font-cinzel mb-2">Condições Únicas</h3>
+        <p class="text-lg">Ofertas especiais que tornam cada aquisição uma relíquia valiosa.</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="group relative h-[45vh] cursor-pointer overflow-hidden">
+      <img
+        src="https://images.pexels.com/photos/14393728/pexels-photo-14393728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Consultoria Personalizada"
+        class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-500"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
+        <h3 class="text-3xl font-bold font-cinzel mb-2">Consultoria Personalizada</h3>
+        <p class="text-lg">Apoio individual para decisões inteligentes no universo dos vinhos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Rediseñada como Texto Central -->
+  <section class="w-full py-24 bg-black text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-cinzel text-[#f3e8dc] mb-6 animate-fade-in-up">
+        Descubra o Universo Vin Rouge
+      </h2>
+      <p class="text-lg text-[#ccc] leading-relaxed mb-12">
+        Uma jornada sensorial pelos sabores mais exclusivos.  
+        Três passos para elevar sua apreciação de vinhos finos.
+      </p>
+      <div class="text-center">
+          <button id="openModalBtn" 
+            class="border border-t-[#7B1E3A] border-l-[#000] border-r-[#000] border-b-[#7B1E3A] text-[#fff] px-16 py-2 uppercase tracking-wider hover:bg-[#7B1E3A] hover:text-white transition">
+              Inscreva-se no evento
+          </button>
+        </div>
+    </div>
+  </section>
+
+  <!-- Escalera de 3 Secciones -->
+  <section class="relative w-full max-w-6xl mx-auto py-24 px-4">
+    <div class="flex justify-between items-start relative">
+
+      <!-- Paso 1 -->
+      <div class="w-1/3 transform translate-y-0">
+        <img src="https://garrafeiracanhoto.com/cdn/shop/files/C7543E39-730B-4327-8E16-F4BF0624EE2A.jpg?v=1724078435&width=823" alt="Seleção" class="mx-auto w-100 h-40 mb-6 transition-transform duration-500 hover:scale-110" />
+        <h3 class="text-2xl font-cinzel text-[#7B1E3A] mb-2">Seleção Exclusiva</h3>
+        <p class="text-gray-300">
+          Garrafas selecionadas com curadoria especializada<br>
+          para paladares exigentes.
+        </p>
+      </div>
+
+      <!-- Paso 2 -->
+      <div class="w-1/3 transform translate-y-8">
+        <img src="https://garrafeiracanhoto.com/cdn/shop/files/C7543E39-730B-4327-8E16-F4BF0624EE2A.jpg?v=1724078435&width=823" alt="Rótulos Raros" class="mx-auto h-40 mb-6 transition-transform duration-500 hover:scale-110" />
+        <h3 class="text-2xl font-cinzel text-[#7B1E3A] mb-2">Rótulos Raros</h3>
+        <p class="text-gray-300">
+          Edições limitadas e safras únicas<br>
+          que valorizam com o tempo.
+        </p>
+      </div>
+
+      <!-- Paso 3 -->
+      <div class="w-1/3 transform translate-y-16">
+        <img src="https://garrafeiracanhoto.com/cdn/shop/files/C7543E39-730B-4327-8E16-F4BF0624EE2A.jpg?v=1724078435&width=823" alt="Consultoria" class="mx-auto h-40 mb-6 transition-transform duration-500 hover:scale-110" />
+        <h3 class="text-2xl font-cinzel text-[#7B1E3A] mb-2">Consultoria Premium</h3>
+        <p class="text-gray-300">
+          Orientação individualizada para<br>
+          escolhas que transcendem o comum.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-6 pt-10 text-center">
+    <p class="text-sm">&copy; 2025 Vin Rouge. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal de registro -->
+  <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+    <div class="bg-[#000] shadow-2xl w-full max-w-sm p-6 relative font-cinzel">
+      <button id="closeModalBtn" class="absolute top-3 right-4 text-black hover:text-[#b9722a] text-2xl font-bold">&times;</button>
+      <h2 class="text-2xl font-semibold mb-6 text-center text-black tracking-wide">Inscreva-se no Evento</h2>
+      <form action="gracias.html" method="GET" class="space-y-4">
+        <div>
+          <label for="name" class="block text-black font-medium mb-1">Nome completo</label>
+          <input type="text" id="name" name="name" required class="w-full border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#b9722a] placeholder:text-[#86696d]" placeholder="Digite seu nome" />
+        </div>
+        <div>
+          <label for="email" class="block text-black font-medium mb-1">E-mail</label>
+          <input type="email" id="email" name="email" required class="w-full border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#b9722a] placeholder:text-[#86696d]" placeholder="nome@email.com" />
+        </div>
+        <div>
+          <label for="message" class="block text-black font-medium mb-1">Mensagem</label>
+          <textarea id="message" name="message" rows="3" required class="w-full border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#b9722a] placeholder:text-[#86696d]" placeholder="Escreva sua mensagem..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-[#6f0303] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
