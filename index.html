@@ -79,7 +79,7 @@
         </h1>
         <div>
           <button id="openModalBtn"
-            class="border mx-4 border-t-[#7B1E3A] hover:bg-[#000] border-l-[#000] border-r-[#000] border-b-[#7B1E3A] text-[#fff] px-16 py-2 uppercase tracking-wider bg-[#7B1E3A] hover:text-white transition">
+            class="border mx-4 border-t-[#7B1E3A] hover:bg-[#000] border-l-[#000] border-r-[#000] border-b-[#7B1E3A] sm:text-sm text-[#fff] px-16 py-2 uppercase tracking-wider bg-[#7B1E3A] hover:text-white transition">
             Inscreva-se no evento
           </button>
         </div>
@@ -97,7 +97,7 @@
       />
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/80 transition-colors duration-500"></div>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
-        <h3 class="text-3xl font-bold font-cinzel mb-2">Rótulos Raros</h3>
+        <h3 class="text-4xl font-bold font-cinzel mb-2">Rótulos Raros</h3>
         <p class="text-lg">Garrafas únicas com alto potencial de valorização ao longo do tempo.</p>
       </div>
     </div>
@@ -111,7 +111,7 @@
       />
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/80 transition-colors duration-500"></div>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
-        <h3 class="text-3xl font-bold font-cinzel mb-2">Descontos Exclusivos</h3>
+        <h3 class="text-4xl font-bold font-cinzel mb-2">Descontos Exclusivos</h3>
         <p class="text-lg">Até 30% de desconto em seleções com curadoria especializada.</p>
       </div>
     </div>
@@ -125,7 +125,7 @@
       />
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/80 transition-colors duration-500"></div>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
-        <h3 class="text-3xl font-bold font-cinzel mb-2">Condições Únicas</h3>
+        <h3 class="text-4xl font-bold font-cinzel mb-2">Condições Únicas</h3>
         <p class="text-lg">Ofertas especiais que tornam cada aquisição uma relíquia valiosa.</p>
       </div>
     </div>
@@ -139,16 +139,16 @@
       />
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/80 transition-colors duration-500"></div>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-6">
-        <h3 class="text-3xl font-bold font-cinzel mb-2">Consultoria Personalizada</h3>
+        <h3 class="text-4xl font-bold font-cinzel mb-2">Consultoria Personalizada</h3>
         <p class="text-lg">Apoio individual para decisões inteligentes no universo dos vinhos.</p>
       </div>
     </div>
   </section>
 
   <!-- CTA Rediseñada como Texto Central -->
-  <section class="w-full py-24 bg-black text-center">
+  <section class="w-full py-24 px-5 bg-black text-center">
     <div class="max-w-2xl mx-auto">
-      <h2 class="text-4xl font-cinzel text-[#f3e8dc] mb-6 animate-fade-in-up">
+      <h2 class="text-4xl font-cinzel text-[#f3e8dc] mb-2 animate-fade-in-up">
         Descubra o Universo Vin Rouge
       </h2>
       <p class="text-lg text-[#ccc] leading-relaxed mb-12">
@@ -156,7 +156,7 @@
         Três passos para elevar sua apreciação de vinhos finos.
       </p>
       <div class="text-center">
-          <button id="openModalBtn" 
+          <button id="openModalBtnDos"
             class="border border-t-[#7B1E3A] hover:bg-[#000] border-l-[#000] border-r-[#000] border-b-[#7B1E3A] text-[#fff] px-16 py-2 uppercase tracking-wider bg-[#7B1E3A] hover:text-white transition">
               Inscreva-se no evento
           </button>
@@ -226,34 +226,63 @@
     </div>
   </section>
 
-
   <!-- Footer -->
   <footer class="bg-black text-white py-6 pt-10 text-center">
     <p class="text-sm">&copy; 2025 Garrafeira Canhoto. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Modal de registro -->
-  <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
-    <div class="bg-[#000] shadow-2xl w-full max-w-sm p-6 relative font-cinzel">
-      <button id="closeModalBtn" class="absolute top-3 right-4 text-black hover:text-[#b9722a] text-2xl font-bold">&times;</button>
-      <h2 class="text-2xl font-semibold mb-6 text-center text-black tracking-wide">Inscreva-se no Evento</h2>
-      <form action="gracias.html" method="GET" class="space-y-4">
-        <div>
+  <!-- Modal 1 -->
+  <div id="modal1" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+    <div class="bg-black text-black p-8 rounded shadow-lg max-w-md w-full h-100 relative">
+      <button id="closeModal1" class="absolute top-2 p-4 right-2 text-white">&times;</button>
+        <!-- Logo centrado -->
+      <div class="absolute animate-fade-in-up inset-0 flex items-start justify-center z-10 pointer-events-none">
+        <img src="img/logo.png" alt="Logo" class="w-52 sm:w-48 md:w-62 md:mt-4 mt-3" />
+      </div>
+      <form action="gracias.html" method="GET" class="space-y-1">
+        <div class="pt-12">
           <label for="name" class="block text-black font-medium mb-1">Nome completo</label>
-          <input type="text" id="name" name="name" required class="w-full border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#b9722a] placeholder:text-[#86696d]" placeholder="Digite seu nome" />
+          <input type="text" id="name" name="name" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Digite seu nome" />
         </div>
         <div>
           <label for="email" class="block text-black font-medium mb-1">E-mail</label>
-          <input type="email" id="email" name="email" required class="w-full border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#b9722a] placeholder:text-[#86696d]" placeholder="nome@email.com" />
+          <input type="email" id="email" name="email" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="nome@email.com" />
         </div>
         <div>
           <label for="message" class="block text-black font-medium mb-1">Mensagem</label>
-          <textarea id="message" name="message" rows="3" required class="w-full border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#b9722a] placeholder:text-[#86696d]" placeholder="Escreva sua mensagem..."></textarea>
+          <textarea id="message" name="message" rows="3" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Escreva sua mensagem..."></textarea>
         </div>
-        <button type="submit" class="w-full bg-[#6f0303] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide">Enviar</button>
+        <button type="submit" class="w-full bg-[#7B1E3A] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide">Enviar</button>
       </form>
     </div>
   </div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+    <div class="bg-black text-black p-8 rounded shadow max-w-md w-full relative">
+      <button id="closeModal2" class="absolute top-2 right-2 text-white">&times;</button>
+      <!-- Logo centrado -->
+      <div class="absolute animate-fade-in-up inset-0 flex items-start justify-center z-10 pointer-events-none">
+        <img src="img/logo.png" alt="Logo" class="w-52 sm:w-48 md:w-62 md:mt-4 mt-3" />
+      </div>
+      <form action="gracias.html" method="GET" class="space-y-1">
+        <div class="pt-12">
+          <label for="name" class="block text-black font-medium mb-1">Nome completo</label>
+          <input type="text" id="name" name="name" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Digite seu nome" />
+        </div>
+        <div>
+          <label for="email" class="block text-black font-medium mb-1">E-mail</label>
+          <input type="email" id="email" name="email" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="nome@email.com" />
+        </div>
+        <div>
+          <label for="message" class="block text-black font-medium mb-1">Mensagem</label>
+          <textarea id="message" name="message" rows="3" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Escreva sua mensagem..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-[#7B1E3A] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide">Enviar</button>
+      </form>
+    </div>
+  </div>
+
   <!-- Alpine.js para el click & estado -->
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 

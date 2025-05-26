@@ -1,28 +1,18 @@
- const openModalBtn = document.getElementById("openModalBtn");
-    const closeModalBtn = document.getElementById("closeModalBtn");
-    const modalBackdrop = document.getElementById("modalBackdrop");
-    const contactForm = document.getElementById("contactForm");
+const modal1 = document.getElementById('modal1');
+  const modal2 = document.getElementById('modal2');
 
-    openModalBtn.addEventListener("click", () => {
-      modalBackdrop.classList.remove("hidden");
-      document.body.style.overflow = "hidden"; // Evita scroll al fondo
-    });
+  document.getElementById('openModalBtn').addEventListener('click', () => {
+    modal1.classList.remove('hidden');
+  });
 
-    closeModalBtn.addEventListener("click", () => {
-      modalBackdrop.classList.add("hidden");
-      document.body.style.overflow = "auto";
-    });
+  document.getElementById('closeModal1').addEventListener('click', () => {
+    modal1.classList.add('hidden');
+  });
 
-    // Cerrar modal si clic afuera del contenido
-    modalBackdrop.addEventListener("click", (e) => {
-      if (e.target === modalBackdrop) {
-        modalBackdrop.classList.add("hidden");
-        document.body.style.overflow = "auto";
-      }
-    });
+  document.getElementById('openModalBtnDos').addEventListener('click', () => {
+    modal2.classList.remove('hidden');
+  });
 
-    // Opcional: validar y enviar formulario (redirige a gracias.html)
-    contactForm.addEventListener("submit", (e) => {
-      // Aquí puedes poner validación extra si quieres.
-      // Por ahora, el action="gracias.html" se encarga de redirigir.
-    });
+  document.getElementById('closeModal2').addEventListener('click', () => {
+    modal2.classList.add('hidden');
+  });
