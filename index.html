@@ -49,10 +49,17 @@
           e investidores em vinhos finos.
         </h1>
         <div>
+
           <button id="openModalBtn"
-            class="border mx-4 border-t-[#7B1E3A] hover:bg-[#000] border-l-[#000] border-r-[#000] border-b-[#7B1E3A] sm:text-sm text-[#fff] px-16 py-2 uppercase tracking-wider bg-[#7B1E3A] hover:text-white transition">
+            class="relative mx-4 inline-flex items-center justify-center gap-3 overflow-hidden 
+                  rounded border-2 border-[#7B1E3A] px-10 py-4 text-white 
+                  text-lg sm:text-xl font-extrabold uppercase tracking-widest 
+                  bg-gradient-to-r from-[#7B1E3A] via-[#A32B4E] to-[#7B1E3A]
+                  shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 
+                  animate-pulse hover:animate-none">
             Inscreva-se no evento
           </button>
+
         </div>
     </div>
   </section>
@@ -127,9 +134,11 @@
         Três passos para elevar sua apreciação de vinhos finos.
       </p>
       <div class="text-center">
-          <button id="openModalBtnDos"
-            class="border border-t-[#7B1E3A] hover:bg-[#000] border-l-[#000] border-r-[#000] border-b-[#7B1E3A] text-[#fff] px-16 py-2 uppercase tracking-wider bg-[#7B1E3A] hover:text-white transition">
-              Inscreva-se no evento
+          <button id="openModalBtn"
+            class="border rounded-lg border-t-[#fff] hover:bg-black border-l-black border-r-black border-b-[#fff] 
+                  text-lg sm:text-xl font-bold text-white px-20 py-4 uppercase tracking-widest 
+                  bg-[#7B1E3A] hover:text-white transition shadow hover:shadow-xl">
+            Inscreva-se no evento
           </button>
         </div>
     </div>
@@ -213,15 +222,15 @@
       <form action="gracias.html" method="GET" class="space-y-1">
         <div class="pt-12">
           <label for="name" class="block text-black font-medium mb-1">Nome completo</label>
-          <input type="text" id="name" name="name" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Digite seu nome" />
+          <input type="text" id="name" name="name" class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Digite seu nome" />
         </div>
         <div>
           <label for="email" class="block text-black font-medium mb-1">E-mail</label>
-          <input type="email" id="email" name="email" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="nome@email.com" />
+          <input type="email" id="email" name="email" class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="nome@email.com" />
         </div>
         <div>
           <label for="message" class="block text-black font-medium mb-1">Mensagem</label>
-          <textarea id="message" name="message" rows="3" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Escreva sua mensagem..."></textarea>
+          <textarea id="message" name="message" rows="3" class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Escreva sua mensagem..."></textarea>
         </div>
         <button type="submit" class="w-full bg-[#7B1E3A] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide">Enviar</button>
       </form>
@@ -239,15 +248,15 @@
       <form action="gracias.html" method="GET" class="space-y-1">
         <div class="pt-12">
           <label for="name" class="block text-black font-medium mb-1">Nome completo</label>
-          <input type="text" id="name" name="name" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Digite seu nome" />
+          <input type="text" id="name" name="name" class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Digite seu nome" />
         </div>
         <div>
           <label for="email" class="block text-black font-medium mb-1">E-mail</label>
-          <input type="email" id="email" name="email" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="nome@email.com" />
+          <input type="email" id="email" name="email" class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="nome@email.com" />
         </div>
         <div>
           <label for="message" class="block text-black font-medium mb-1">Mensagem</label>
-          <textarea id="message" name="message" rows="3" required class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Escreva sua mensagem..."></textarea>
+          <textarea id="message" name="message" rows="3" class="w-full text-white border border-[#4b0e1e] rounded px-4 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#fff] placeholder:text-[#fff]" placeholder="Escreva sua mensagem..."></textarea>
         </div>
         <button type="submit" class="w-full bg-[#7B1E3A] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide">Enviar</button>
       </form>
