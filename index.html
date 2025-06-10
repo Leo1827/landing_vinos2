@@ -20,8 +20,6 @@
   <meta name="twitter:description" content="Garrafeira online de vinhos portugueses e vinhos finos, uma seleção exclusiva para entrar neste maravilhoso mundo de luxo e vinhos de alta qualidade para ter na sua garrafeira. Os vinhos finos são um nicho de mercado que representa apenas 1% da produção mundial, sinto vinhos de excelente qualidade e de baixa produção.">
   <link rel="icon" href="https://garrafeiracanhoto.com/cdn/shop/files/WhatsApp_Image_2021-11-21_at_13.03.06_a15641b8-7c29-48f0-b038-ea89f98c0e4b.jpg?crop=center&height=32&v=1691946283&width=32" type="image/png">
 
-  <title>Garrafeira Canhoto</title>
-
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -30,6 +28,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '3114979422107735'); 
+      fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=3114979422107735&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
 
   <!-- Styles -->
    <link rel="stylesheet" href="css/style.css">
@@ -287,6 +303,7 @@
         <input type="hidden" name="anticsrf" value="true" />
 
         <button
+          id="submitButton1"
           type="submit"
           class="w-full bg-[#7B1E3A] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide"
         >
@@ -357,6 +374,7 @@
       <input type="hidden" name="anticsrf" value="true" />
 
       <button
+        id="submitButton2"
         type="submit"
         class="w-full bg-[#7B1E3A] text-white uppercase font-semibold py-2 rounded hover:bg-[#320914] transition tracking-wide"
       >
@@ -394,6 +412,14 @@
 
   <!-- Scripts MailerLite -->
   <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+  <script type="text/javascript">
+    document.getElementById('submitButton1').addEventListener('click', function() {
+      fbq('track', 'CompleteRegistration');
+    }, false);
 
+    document.getElementById('submitButton2').addEventListener('click', function() {
+      fbq('track', 'CompleteRegistration');
+    }, false);
+  </script>
 </body>
 </html>
