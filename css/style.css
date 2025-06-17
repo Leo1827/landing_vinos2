@@ -1,7 +1,6 @@
 @layer utilities {
-    .font-cinzel {
-        font-family: 'Adoha';
-        src: url('https://tuservidor.com/fonts/Adoha-Regular.woff2') format('woff2');
+    .font-monserrat {
+        font-family: 'Montserrat', sans-serif;
     }
     @keyframes fade-in-up {
     from {
